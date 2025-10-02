@@ -222,7 +222,7 @@ const HomePage = () => {
       </section>
 
       {/* Floating Stats Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-950 to-slate-900">
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <motion.div 
             ref={statsRef}
@@ -241,11 +241,11 @@ const HomePage = () => {
                 transition={{ delay: index * 0.1 }}
                 className="relative group"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <div className="relative bg-slate-800/50 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-all duration-300">
-                  <div className="text-green-400 mb-3">{stat.icon}</div>
-                  <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-gray-400">{stat.label}</div>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-400/10 to-emerald-400/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                <div className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl border border-green-100 hover:border-green-300 transition-all duration-300">
+                  <div className="text-green-600 mb-3">{stat.icon}</div>
+                  <div className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</div>
+                  <div className="text-gray-600">{stat.label}</div>
                 </div>
               </motion.div>
             ))}
@@ -254,7 +254,7 @@ const HomePage = () => {
       </section>
 
       {/* Services Grid with 3D Cards */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-gradient-to-b from-white to-green-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}
@@ -262,10 +262,10 @@ const HomePage = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
               Our Energy Solutions
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Comprehensive energy management services tailored to your business needs
             </p>
           </motion.div>
@@ -280,16 +280,15 @@ const HomePage = () => {
                 className="group relative"
               >
                 <Link to={service.link}>
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                  <div className="relative bg-slate-800/80 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-all duration-300 group-hover:transform group-hover:-translate-y-2">
-                    <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${service.gradient} mb-4`}>
+                  <div className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl border border-gray-100 transition-all duration-300 group-hover:transform group-hover:-translate-y-2">
+                    <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${service.gradient} mb-4 shadow-lg`}>
                       <div className="text-white">{service.icon}</div>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                    <p className="text-gray-400 mb-4">{service.description}</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+                    <p className="text-gray-600 mb-4">{service.description}</p>
                     <div className="flex items-center justify-between">
-                      <span className="text-green-400 font-semibold">{service.savings}</span>
-                      <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-green-400 group-hover:translate-x-1 transition-all" />
+                      <span className="text-green-600 font-semibold">{service.savings}</span>
+                      <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-green-600 group-hover:translate-x-1 transition-all" />
                     </div>
                   </div>
                 </Link>
@@ -300,17 +299,17 @@ const HomePage = () => {
       </section>
 
       {/* Modern Process Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-950">
+      <section className="py-20 bg-gradient-to-b from-green-50 to-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
               How It Works
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Four simple steps to massive energy savings
             </p>
           </motion.div>
@@ -325,14 +324,14 @@ const HomePage = () => {
                 className="relative"
               >
                 {index < processSteps.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 left-full w-full h-0.5 bg-gradient-to-r from-green-500/50 to-transparent z-0"></div>
+                  <div className="hidden md:block absolute top-1/2 left-full w-full h-0.5 bg-gradient-to-r from-green-400/50 to-transparent z-0"></div>
                 )}
                 <div className="relative z-10 text-center">
-                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-4">
-                    <span className="text-3xl font-bold text-green-400">{step.number}</span>
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 shadow-lg mb-4">
+                    <span className="text-3xl font-bold text-white">{step.number}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                  <p className="text-gray-400">{step.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
+                  <p className="text-gray-600">{step.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -341,11 +340,11 @@ const HomePage = () => {
       </section>
 
       {/* Supplier Carousel */}
-      <section className="py-12 bg-slate-950">
+      <section className="py-12 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-2">Trusted by Leading Suppliers</h3>
-            <p className="text-gray-400">Access exclusive rates from 30+ energy providers</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Trusted by Leading Suppliers</h3>
+            <p className="text-gray-600">Access exclusive rates from 30+ energy providers</p>
           </div>
           <SupplierCarousel />
         </div>
