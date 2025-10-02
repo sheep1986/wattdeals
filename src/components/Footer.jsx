@@ -230,7 +230,7 @@ const Footer = () => {
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-center md:text-left text-sm text-gray-600">
-              <p>© {currentYear} Watt Deals UK Ltd. All rights reserved. Company Registration: 03912588</p>
+              <p>© {currentYear} Watt Utilities Ltd. All rights reserved. Company Registration: 06702949</p>
               <p className="mt-1">
                 Registered Office: St Ann's House, Manchester, M2 7LP
               </p>
