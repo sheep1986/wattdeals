@@ -225,14 +225,25 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
+      {/* Bottom Bar with ICO Logo */}
       <div className="bg-gray-50 py-4">
         <div className="container">
-          <div className="text-center text-sm text-gray-600">
-            <p>© {currentYear} Watt Deals UK Ltd. All rights reserved. Company Registration: 03912588</p>
-            <p className="mt-1">
-              Registered Office: St Ann's House, Manchester, M2 7LP
-            </p>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="text-center md:text-left text-sm text-gray-600">
+              <p>© {currentYear} Watt Deals UK Ltd. All rights reserved. Company Registration: 03912588</p>
+              <p className="mt-1">
+                Registered Office: St Ann's House, Manchester, M2 7LP
+              </p>
+            </div>
+            {/* ICO Registration Logo */}
+            <div className="flex items-center gap-2">
+              <img 
+                src="https://i.ibb.co/xSCWDtYf/5.png" 
+                alt="ICO Registration" 
+                className="h-16 w-auto"
+              />
+              <span className="text-xs text-gray-500">Data Protection<br />Registration</span>
+            </div>
           </div>
         </div>
       </div>

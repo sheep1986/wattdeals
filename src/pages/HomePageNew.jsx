@@ -240,9 +240,20 @@ const HomePage = () => {
         </motion.div>
       </section>
 
-      {/* Floating Stats Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container mx-auto px-4">
+      {/* Floating Stats Section with Background Image */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative">
+        {/* Background with city images */}
+        <div className="absolute inset-0 overflow-hidden opacity-10">
+          <div className="grid grid-cols-2 h-full">
+            <div className="relative">
+              <img src="https://i.ibb.co/sPcLPsG/manchester.jpg" alt="Manchester" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative">
+              <img src="https://i.ibb.co/W56v4Hx/london.jpg" alt="London" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div 
             ref={statsRef}
             className="grid md:grid-cols-4 gap-6"
@@ -299,15 +310,38 @@ const HomePage = () => {
                 className="group relative"
               >
                 <Link to={service.link}>
-                  <div className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl border border-gray-100 transition-all duration-300 group-hover:transform group-hover:-translate-y-2">
-                    <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${service.gradient} mb-4 shadow-lg`}>
-                      <div className="text-white">{service.icon}</div>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-green-600 font-semibold">{service.savings}</span>
-                      <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-green-600 group-hover:translate-x-1 transition-all" />
+                  <div className="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl border border-gray-100 transition-all duration-300 group-hover:transform group-hover:-translate-y-2 h-full flex flex-col">
+                    {/* Add images for each service */}
+                    {service.title === 'Green Energy' && (
+                      <div className="h-40 overflow-hidden">
+                        <img src="https://i.ibb.co/4fCfzyV/wind-power-plant-at-sunset-5639456.jpg" alt="Wind Power" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                      </div>
+                    )}
+                    {service.title === 'Business Electricity' && (
+                      <div className="h-40 overflow-hidden">
+                        <img src="https://i.ibb.co/mRJQxkr/solar-panels.jpg" alt="Solar Panels" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                      </div>
+                    )}
+                    {service.title === 'Business Gas' && (
+                      <div className="h-40 overflow-hidden">
+                        <img src="https://i.ibb.co/q1Rq7hB/lightbulb.jpg" alt="Energy Innovation" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                      </div>
+                    )}
+                    {service.title === 'Multi-Site Energy' && (
+                      <div className="h-40 overflow-hidden">
+                        <img src="https://i.ibb.co/KVBCc1y/laptop.jpg" alt="Business Technology" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                      </div>
+                    )}
+                    <div className="p-6 flex-grow flex flex-col">
+                      <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${service.gradient} mb-4 shadow-lg self-start`}>
+                        <div className="text-white">{service.icon}</div>
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+                      <p className="text-gray-600 mb-4 flex-grow">{service.description}</p>
+                      <div className="flex items-center justify-between mt-auto">
+                        <span className="text-green-600 font-semibold">{service.savings}</span>
+                        <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-green-600 group-hover:translate-x-1 transition-all" />
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -317,9 +351,16 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Modern Process Section */}
-      <section className="py-20 bg-gradient-to-b from-green-50 to-white">
-        <div className="container mx-auto px-4">
+      {/* Modern Process Section with Images */}
+      <section className="py-20 bg-gradient-to-b from-green-50 to-white relative overflow-hidden">
+        {/* Decorative Images */}
+        <div className="absolute right-0 top-20 w-64 h-64 opacity-10">
+          <img src="https://i.ibb.co/GJ8vPYM/man.jpg" alt="Professional" className="w-full h-full object-cover rounded-full" />
+        </div>
+        <div className="absolute left-0 bottom-20 w-64 h-64 opacity-10">
+          <img src="https://i.ibb.co/dkLxCzQ/student.jpg" alt="Student" className="w-full h-full object-cover rounded-full" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -366,6 +407,174 @@ const HomePage = () => {
             <p className="text-gray-600">Access exclusive rates from 30+ energy providers</p>
           </div>
           <SupplierCarousel />
+          
+          {/* Partnership Logos */}
+          <div className="mt-12 pt-8 border-t border-gray-200">
+            <h4 className="text-center text-lg font-semibold text-gray-700 mb-6">Our Partnerships & Accreditations</h4>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+              <img 
+                src="https://i.ibb.co/S7PKPmt/1.png" 
+                alt="Partnership 1" 
+                className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+              <img 
+                src="https://i.ibb.co/LDws4MW/2.png" 
+                alt="Partnership 2" 
+                className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+              <img 
+                src="https://i.ibb.co/6cbMz0J/3.png" 
+                alt="Partnership 3" 
+                className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+              <img 
+                src="https://i.ibb.co/m5QSF5y/4.png" 
+                alt="Partnership 4" 
+                className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Savings Calculator Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="order-2 lg:order-1"
+            >
+              <img 
+                src="https://i.ibb.co/VYkBwrk/calculator-1156121-1280.jpg" 
+                alt="Energy Savings Calculator" 
+                className="rounded-2xl shadow-2xl w-full"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="order-1 lg:order-2"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                Calculate Your Savings
+              </h2>
+              <p className="text-xl text-gray-600 mb-6">
+                Our advanced calculator analyzes your current energy costs and shows you exactly how much you could save with our tailored solutions.
+              </p>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center gap-3">
+                  <Check className="w-6 h-6 text-green-500" />
+                  <span className="text-gray-700">Instant savings calculation</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Check className="w-6 h-6 text-green-500" />
+                  <span className="text-gray-700">Compare multiple suppliers</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Check className="w-6 h-6 text-green-500" />
+                  <span className="text-gray-700">No obligation quote</span>
+                </li>
+              </ul>
+              <motion.a
+                href="https://app.watt.co.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-xl font-bold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 shadow-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Calculate My Savings
+                <Calculator className="w-5 h-5" />
+              </motion.a>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Expert Consultation Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                Expert Energy Consultation
+              </h2>
+              <p className="text-xl text-gray-600 mb-6">
+                Our dedicated team of energy experts work tirelessly to find the perfect energy solution for your business needs.
+              </p>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-4">
+                  <div className="p-2 bg-green-100 rounded-lg">
+                    <Users className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Dedicated Account Manager</h3>
+                    <p className="text-gray-600">Personal support throughout your energy journey</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="p-2 bg-green-100 rounded-lg">
+                    <BarChart3 className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Market Analysis</h3>
+                    <p className="text-gray-600">Real-time market insights and forecasting</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="p-2 bg-green-100 rounded-lg">
+                    <Shield className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Contract Management</h3>
+                    <p className="text-gray-600">We handle all the paperwork and negotiations</p>
+                  </div>
+                </div>
+              </div>
+              <motion.a
+                href="tel:01618338661"
+                className="inline-flex items-center gap-2 bg-white text-green-600 px-8 py-4 rounded-xl font-bold border-2 border-green-500 hover:bg-green-50 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Phone className="w-5 h-5" />
+                Book Free Consultation
+              </motion.a>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <img 
+                src="https://i.ibb.co/gLhrYdg/meeting-2284501-1280.jpg" 
+                alt="Business Meeting" 
+                className="rounded-2xl shadow-2xl w-full"
+              />
+              <div className="mt-6 p-6 bg-green-50 rounded-xl border border-green-100">
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="flex -space-x-2">
+                    <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">JD</div>
+                    <div className="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold">SC</div>
+                    <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">MR</div>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900">Energy Experts</p>
+                    <p className="text-sm text-gray-600">Available Mon-Fri, 8am-6pm</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 italic">"Our team saved £12,000 last year thanks to Watt Deals' expert guidance!"</p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -406,6 +615,52 @@ const HomePage = () => {
               </motion.a>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Business Success Section with Image */}
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                Empowering Business Success
+              </h2>
+              <p className="text-xl text-gray-600 mb-6">
+                From startups to enterprise, we've helped thousands of UK businesses transform their energy costs into competitive advantages.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="bg-white p-6 rounded-xl shadow-md">
+                  <h3 className="text-2xl font-bold text-green-600 mb-2">98%</h3>
+                  <p className="text-gray-600">Customer Retention Rate</p>
+                </div>
+                <div className="bg-white p-6 rounded-xl shadow-md">
+                  <h3 className="text-2xl font-bold text-green-600 mb-2">£2M+</h3>
+                  <p className="text-gray-600">Saved This Year</p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <img 
+                src="https://i.ibb.co/LdcGGQH/business-man.jpg" 
+                alt="Business Success" 
+                className="rounded-2xl shadow-2xl w-full"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-green-500 to-emerald-500 text-white p-6 rounded-xl shadow-xl max-w-xs">
+                <p className="font-semibold">"Watt Deals transformed our energy strategy completely!"</p>
+                <p className="text-sm mt-2 opacity-90">- James Wilson, CEO</p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 

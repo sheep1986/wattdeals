@@ -88,7 +88,7 @@ const QuoteForm = ({ variant = 'default' }) => {
           <img 
             src="/watt-deals-logo-new.png" 
             alt="Watt Deals" 
-            className="h-14 w-auto object-contain"
+            className="h-20 w-auto object-contain"
           />
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2">

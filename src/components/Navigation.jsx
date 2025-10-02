@@ -59,6 +59,7 @@ const Navigation = () => {
       title: 'Support',
       dropdown: [
         { name: 'FAQ', path: '/faq' },
+        { name: 'LOA Form', path: '/loa' },
         { name: 'Get Quote', path: 'https://app.watt.co.uk', external: true },
         { name: 'Contact Us', path: 'https://app.watt.co.uk', external: true },
       ]
