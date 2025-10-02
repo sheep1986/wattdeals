@@ -1,605 +1,275 @@
-# Watt Savings Website 3 - Development Status & Analysis
+# 🚀 Watt Deals - Smart Business Energy Solutions
 
 ## 🎯 Project Overview
 
-This is Website 3 in the Watt Group series, designed for **Watt Savings** - a business energy comparison service. The site is currently running on **http://localhost:5656/index-premium.html**.
+**Watt Deals** is a modern business energy comparison platform built with React, offering comprehensive energy procurement solutions for UK businesses. The website features a glassmorphism design with dark theme and green accents, providing an elegant and professional user experience.
 
-## 📊 Current Status: **INCOMPLETE PROTOTYPE**
+## 🚀 Quick Start
 
-### ✅ **Completed Features:**
-- Premium homepage design with Bionic-inspired layout
-- Real-time Trustpilot integration with live reviews
-- Comprehensive LOA (Letter of Authority) page with secure form
-- Google Sheets integration for automatic form submissions
-- Professional navigation with Watt Savings branding
+```bash
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm run dev
+
+# Build for production
+pnpm run build
+
+# Preview production build
+pnpm run preview
+```
+
+**Development URL:** http://localhost:7763
+
+## ✅ **Key Features:**
+- Modern glassmorphism design with dark theme
+- Green color scheme (#00C853) throughout
+- Real-time Trustpilot integration
+- LOA (Letter of Authority) page with comprehensive form
+- Google Sheets integration for lead capture
+- Professional navigation with Watt Deals branding
 - Real contact details (0161 833 8661)
-- Responsive design for all devices
-- Enhanced visual effects and animations
+- Responsive design optimized for all devices
+- Animated backgrounds and floating orbs
+- 30+ energy supplier logos
+- External quote app integration (https://app.watt.co.uk)
 
-### ❌ **Critical Issues Identified:**
+## 🛠️ **Technical Stack:**
 
-#### **1. BROKEN NAVIGATION SYSTEM (95% non-functional)**
-- **Service Pages**: Business Electricity, Gas, Solar, Green Energy all link to `href="#"`
-- **Main Navigation**: About, Case Studies, Resources all broken
-- **Footer Links**: Most footer navigation is placeholder `href="#"`
-- **Social Media**: Twitter, LinkedIn links are broken
-- **Legal Pages**: Terms & Conditions, Privacy Policy don't exist
+- **React 18** with Vite build tooling
+- **Tailwind CSS** for styling
+- **Framer Motion** for animations
+- **React Router v6** for navigation
+- **Lucide React** for icons
+- **React Helmet Async** for SEO
+- **pnpm** package manager
 
-#### **2. CTA BUTTONS GO TO WRONG DESTINATIONS**
-- "Get a Quote" buttons should link to `https://app.watt.co.uk` (like Websites 1 & 2 do)
-- Currently they trigger popups instead of redirecting to the external quote app
-- All CTAs on other sites use: `window.location.href = 'https://app.watt.co.uk'`
-- This is the main external destination for quote processing
+## 📁 **Project Structure:**
 
-#### **3. MISSING CORE CONTENT PAGES**
-- No dedicated service pages (Business Electricity, Gas, etc.)
-- No About Us page with company story
-- No Case Studies with real savings examples
-- No educational content (Energy Guides, Switching Process, etc.)
-- No proper contact page structure
-
-#### **4. DESIGN INCONSISTENCIES**
-- **Too many glow effects** - overcomplicated vs clean design of Websites 1 & 2
-- **Wrong color scheme** - should use dark theme with emerald/green like other sites
-- **CTA strategy** - buttons should lead to proper destinations, not popups
-
-## 🔍 **Comparative Analysis: Websites 1 & 2 vs Website 3**
-
-### **What Makes Websites 1 & 2 Successful:**
-
-#### **Design Patterns:**
-- **Consistent Dark Theme**: Slate-900/950 backgrounds with emerald/green accents
-- **Professional Typography**: Inter and Poppins fonts with clear hierarchy
-- **Card-Based Layouts**: Consistent rounded corners and subtle borders
-- **Clean Visual Effects**: Subtle animations, no excessive glows
-
-#### **CTA Strategy:**
 ```
-Landing → Multi-step Quote Form → Address Validation → Lead Capture → Follow-up
-```
-- **Multi-step Forms**: Reduces friction with progressive disclosure
-- **Real Address Validation**: Integration with Postcodes.io
-- **Conditional Logic**: Forms adapt based on utility type
-- **Mobile Optimization**: Sticky CTAs and touch-friendly interface
-
-#### **Content Architecture:**
-```
-Services/
-├── Business Electricity
-├── Business Gas  
-├── Business Water
-├── Business Broadband
-├── Multi-site & Large
-└── Solar Energy
-
-Resources/
-├── Energy Guides
-├── Saving Tips
-├── Contract Types
-├── Switching Process
-├── Market Insights
-└── Bill Validation
-
-Company/
-├── About Us
-├── Case Studies
-├── Testimonials
-├── Contact
-└── Compliance
+WATT DEALS WEB SITE 4/
+├── src/
+│   ├── components/
+│   │   ├── Navigation.jsx
+│   │   ├── Footer.jsx
+│   │   ├── QuoteForm.jsx
+│   │   ├── SupplierCarousel.jsx
+│   │   └── TrustpilotWidget.jsx
+│   ├── pages/
+│   │   ├── HomePageNew.jsx
+│   │   └── LOAPage.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── public/
+│   ├── images/
+│   │   ├── watt-deals-logo-new.png
+│   │   └── supplier-logos/
+├── tailwind.config.js
+├── vite.config.js
+├── package.json
+└── README.md
 ```
 
-#### **Navigation Structure:**
-- **Mega Menus**: Rich dropdowns with icons and descriptions
-- **Internal Linking**: Strategic cross-linking between related content
-- **Breadcrumbs**: Clear page hierarchy
-- **Mobile-First**: Hamburger menus with full functionality
+## 🎨 **Design System:**
 
-#### **Trust Elements:**
-- **Trustpilot Integration**: Real reviews prominently displayed
-- **Transparency**: Clear commission structure explanations
-- **Credentials**: TPI Code compliance, regulatory mentions
-- **Case Studies**: Real business examples with specific savings figures
-
-### **What Website 3 Is Missing:**
-
-#### **Technical Functionality:**
-- ❌ Multi-step quote forms
-- ❌ Address validation system
-- ❌ Postcode lookup integration
-- ❌ Conditional form logic
-- ❌ Progressive disclosure UX
-
-#### **Content Strategy:**
-- ❌ Educational content that builds expertise
-- ❌ Real case studies with savings figures
-- ❌ Comprehensive service descriptions
-- ❌ Market insights and guides
-- ❌ Transparent pricing information
-
-#### **User Experience:**
-- ❌ Proper navigation structure
-- ❌ Internal content linking
-- ❌ Mobile-optimized forms
-- ❌ Sticky mobile CTAs
-- ❌ Clear user journey mapping
-
-## 🎨 **Design System Analysis**
-
-### **Current Issues:**
-- **Excessive Effects**: Too many glows, pulses, and animations
-- **Color Inconsistency**: Light theme vs required dark theme
-- **CTA Problems**: Popups instead of proper page flow
-- **Typography Hierarchy**: Needs refinement to match brand standards
-
-### **Required Design System:**
+### **Color Palette:**
 ```css
 /* Primary Colors */
-Primary: #16a34a (emerald-600)
-Secondary: #059669 (emerald-700) 
-Background: #0f172a (slate-900)
-Cards: #1e293b (slate-800)
+--primary: #00C853        /* Main Green */
+--primary-dark: #00A041   /* Dark Green */
+--primary-light: #69F0AE  /* Light Green */
 
-/* Typography */
-Headings: Inter, font-weight: 600-800
-Body: Inter, font-weight: 400
-Accent: Poppins for special elements
+/* Background Colors */
+--bg-dark: #0f172a        /* Slate 950 */
+--bg-medium: #1e293b      /* Slate 900 */
+--bg-light: #334155       /* Slate 800 */
 
-/* Effects */
-Subtle shadows, minimal glows
-Focus on clean lines and professional feel
-Card-based layouts with consistent spacing
+/* Text Colors */
+--text-primary: #ffffff   /* White */
+--text-secondary: #94a3b8 /* Gray 400 */
+--text-accent: #00C853    /* Green */
 ```
 
-## 📋 **Priority Fix List**
+### **Typography:**
+- **Headings**: Inter, font-weight: 600-800
+- **Body Text**: Inter, font-weight: 400
+- **Display**: Space Grotesk for special elements
 
-### **🚨 CRITICAL (Fix First):**
-1. **Fix Navigation System** - Create missing pages and update all `href="#"` links
-2. **Fix CTA Buttons** - Replace popups with redirect to `https://app.watt.co.uk`
-3. **Create Service Pages** - Business Electricity, Gas, Solar, etc.
-4. **Design System Cleanup** - Remove excessive effects, implement dark theme
-5. **Add Social Media Links** - Update with correct external URLs
+### **Visual Effects:**
+- Glassmorphism with backdrop-blur
+- Subtle floating animations
+- Gradient overlays
+- Animated background patterns
+- Hover state transitions
 
-### **📋 HIGH PRIORITY:**
-6. **Content Creation** - About, Case Studies, Educational pages
-7. **Mega Menu Implementation** - Rich navigation dropdowns
-8. **Mobile Optimization** - Sticky CTAs, responsive forms
-9. **Legal Pages** - Terms, Privacy Policy, Complaints
-10. **Footer Functionality** - Working links throughout
+## 🌐 **Environment Variables:**
 
-### **🎯 MEDIUM PRIORITY:**
-11. **SEO Optimization** - Proper meta tags, structured data
-12. **Performance** - Image optimization, lazy loading
-13. **Analytics Integration** - Form tracking, conversion metrics
-14. **Advanced Features** - Calculators, interactive tools
-15. **Third-party Integration** - Enhanced Trustpilot features
-
-## 📁 **Current File Structure**
-
-```
-WATT SAVINGS WEB SITE 3/
-├── index.html (redirects to premium)
-├── index-premium.html (main homepage)
-├── loa.html (Letter of Authority page)
-├── googleSheets.js (form integration)
-├── WattSavingsGoogleAppsScript.gs (backend script)
-├── GOOGLE_SHEETS_SETUP_GUIDE.md (deployment guide)
-├── README.md (this file)
-├── public/
-│   ├── watt-savings-logo.png
-│   ├── images/ (6 images: lightbulb, london, solar, job, cheese, blackout)
-│   └── supplier-logos/ (16 supplier logos)
-└── [MISSING: All other required pages]
-```
-
-## 🎯 **Success Metrics from Websites 1 & 2**
-
-### **Conversion Optimization:**
-- **Multi-step Forms**: 40% higher completion rates
-- **Address Validation**: 25% reduction in form abandonment  
-- **Mobile Sticky CTAs**: 30% increase in mobile conversions
-- **Trust Elements**: 50% increase in form submissions
-
-### **User Experience:**
-- **Page Load Speed**: < 3 seconds average
-- **Mobile Responsiveness**: 100% mobile-friendly
-- **Navigation Clarity**: < 2 clicks to any page
-- **Form Completion**: 65% completion rate on quote forms
-
-### **Business Impact:**
-- **Lead Quality**: 85% qualified leads from forms
-- **Customer Journey**: Clear path from awareness to conversion
-- **Trust Building**: Transparent pricing increases close rates
-- **Educational Content**: Builds authority and reduces sales cycle
-
-## 🚀 **Next Steps**
-
-1. **User Review & Approval** - Get feedback on priority fixes
-2. **Critical Navigation Fix** - Create missing pages and fix all broken links
-3. **Form System Overhaul** - Implement multi-step forms with validation
-4. **Design System Implementation** - Apply consistent dark theme
-5. **Content Creation Phase** - Add all missing service and company pages
-6. **Testing & Optimization** - Ensure feature parity with Websites 1 & 2
-7. **Performance Audit** - Optimize for speed and SEO
-8. **Launch Preparation** - Final testing and deployment setup
-
-## 📞 **Current Working Features**
-
-- ✅ Phone: 0161 833 8661
-- ✅ Email: info@wattsavings.co.uk
-- ✅ Trustpilot Integration
-- ✅ Google Sheets Form Submission
-- ✅ Responsive Design
-- ✅ LOA Page Functionality
-
-## 🎯 **Goal: Feature Parity with Websites 1 & 2**
-
-The ultimate goal is to bring Website 3 up to the same professional standard and functionality level as the existing Watt websites, with improved performance and user experience.
-
-## 📝 **Link Analysis - Current Destinations**
-
-### 🔗 **EXTERNAL LINKS USED BY WEBSITES 1 & 2:**
-
-#### **Primary CTA Destination:**
-- **Quote Forms**: `https://app.watt.co.uk` (external quote application)
-- **Implementation**: `window.location.href = 'https://app.watt.co.uk'` or `<a href="https://app.watt.co.uk">`
-
-#### **LOA (Letter of Authority):**
-- **LOA Page**: Internal dedicated page (`/loa` URL)  
-- **LOA Form Service**: `https://app.signable.co.uk/widget/url/[ID]` (external form processor)
-- **Implementation**: Embedded iframe, not popup
-
-#### **Trustpilot Integration:**
-- **Reviews Page**: `https://www.trustpilot.com/review/watt.co.uk`
-- **Widget Script**: `//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js`
-- **Brand Assets**: `https://cdn.trustpilot.net/brand-assets/4.1.0/logo-black.svg`
-
-#### **Social Media:**
-- **Facebook**: `https://www.facebook.com/profile.php?id=61580022617531`
-- **Instagram**: `https://instagram.com/watt_choice`  
-- **LinkedIn**: `https://www.linkedin.com/company/watt-co-uk-ltd/`
-- **Twitter**: `https://twitter.com/wattutilities`
-
-### ❌ **BROKEN LINKS (Need Immediate Fix):**
-```
-Navigation Dropdowns:
-- Business Electricity → href="#" ❌
-- Business Gas → href="#" ❌  
-- Multi-Site Energy → href="#" ❌
-- Solar Energy → href="#" ❌
-- Green Energy → href="#" ❌
-- Energy Saving Tips → href="#" ❌
-- Bill Validation → href="#" ❌
-- Contract Types → href="#" ❌
-- Switching Process → href="#" ❌
-
-Main Navigation:
-- About → href="#" ❌
-- Case Studies → href="#" ❌
-
-Footer Links:
-- All service pages → href="#" ❌
-- About Us → href="#" ❌
-- Contact → href="#" ❌
-- Terms & Conditions → href="#" ❌
-- Privacy Policy → href="#" ❌
-- Complaints → href="#" ❌
-
-Social Media:
-- Twitter → href="#" ❌
-- LinkedIn → href="#" ❌
-```
-
-### ✅ **WORKING LINKS:**
-```
-Contact:
-- Phone → tel:01618338661 ✅
-- Email → mailto:info@wattsavings.co.uk ✅
-
-External:
-- Trustpilot → https://uk.trustpilot.com/review/wattsavings.co.uk ✅
-- Trustpilot Widget Script → //widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js ✅
-
-Internal:
-- LOA navigation → Links between pages work ✅
-- LOA page → loa.html exists and functions ✅
-```
-
-### ⚠️ **CTA REDIRECT ISSUES:**
-```
-Quote Forms:
-- "Get a Quote" buttons → showQuoteModal() (should redirect to https://app.watt.co.uk)
-- Mobile CTAs → showQuoteModal() (should use window.location.href = 'https://app.watt.co.uk')
-- All other sites redirect to external app, not show popups
-```
-
-**CRITICAL FINDING: 95% of the website's navigation is non-functional. Users cannot navigate beyond the homepage and LOA page.**
-
-## 🛠️ **Technical Stack & Dependencies**
-
-### **Frontend Technologies:**
-- **HTML5** - Semantic markup structure
-- **Tailwind CSS** - Utility-first CSS framework (via CDN)
-- **JavaScript (ES6+)** - Modern vanilla JavaScript
-- **Font Awesome 6.5.1** - Icon library (via CDN)
-- **Google Fonts** - Inter font family
-- **Responsive Design** - Mobile-first approach
-
-### **Backend Integration:**
-- **Google Apps Script** - Form processing backend
-- **Google Sheets** - Lead data storage
-- **Gmail API** - Email notifications
-- **Trustpilot API** - Review integration
-
-### **Required Setup:**
-- **Local HTTP Server** - Python 3 (currently running on port 5656)
-- **Google Account** - For Sheets and Apps Script deployment
-- **Domain & Hosting** - For production deployment
-
-## 🚀 **Quick Start Guide**
-
-### **Local Development:**
 ```bash
-# Navigate to project directory
-cd "WATT SAVINGS WEB SITE 3"
-
-# Start local server
-python3 -m http.server 5656
-
-# Access website
-http://localhost:5656/index-premium.html
+# Create .env file in project root
+VITE_GOOGLE_SHEETS_URL=your_google_sheets_webhook_url
+VITE_TRUSTPILOT_BUSINESS_ID=your_trustpilot_id
+VITE_GA_MEASUREMENT_ID=your_google_analytics_id
 ```
 
-### **Google Sheets Setup:**
-1. Follow `GOOGLE_SHEETS_SETUP_GUIDE.md`
-2. Deploy the Apps Script from `WattSavingsGoogleAppsScript.gs`
-3. Update URLs in HTML files with your Apps Script deployment URL
+## 🚀 **Deployment:**
 
-## 📊 **Performance Benchmarks**
+### **GitHub Repository:**
+```bash
+# Repository URL
+https://github.com/sheep1986/wattdeals.git
 
-### **Current Performance Issues:**
-- **Page Load Time**: ~2.8s (Target: <2s)
-- **Large Images**: Some unoptimized assets
-- **External Dependencies**: Multiple CDN calls
-- **JavaScript**: Inline scripts need optimization
+# Clone the repository
+git clone https://github.com/sheep1986/wattdeals.git
 
-### **Optimization Needed:**
-- Image compression and WebP format
-- CSS/JS minification
-- CDN optimization
-- Lazy loading implementation
+# Navigate to project
+cd wattdeals
 
-## 🔐 **Security Considerations**
+# Install dependencies
+pnpm install
 
-### **Current Security Features:**
-- ✅ HTTPS for external resources
-- ✅ No inline unsafe scripts
-- ✅ Proper form validation
-- ✅ GDPR compliant data handling
-
-### **Security Improvements Needed:**
-- Content Security Policy (CSP) headers
-- Input sanitization for forms
-- Rate limiting on form submissions
-- SSL certificate for production
-
-## 📱 **Browser Compatibility**
-
-### **Tested On:**
-- ✅ Chrome 91+ (Full compatibility)
-- ✅ Safari 14+ (Full compatibility)
-- ✅ Firefox 88+ (Full compatibility)
-- ✅ Edge 91+ (Full compatibility)
-
-### **Mobile Testing:**
-- ✅ iOS Safari (iPhone/iPad)
-- ✅ Android Chrome
-- ✅ Responsive breakpoints working
-
-### **Known Issues:**
-- IE11 not supported (by design)
-- Some older Android browsers may have CSS grid issues
-
-## 🎨 **Design System & Enhancement Opportunities**
-
-### **Current Design Issues:**
-- **Excessive glow effects** - Too many shadows and glows
-- **Inconsistent spacing** - Needs better rhythm and hierarchy  
-- **Poor visual hierarchy** - Text sizes and weights need refinement
-- **Limited animations** - Could use more micro-interactions
-- **Static components** - Missing hover states and transitions
-
-### **🚀 FREE THIRD-PARTY TOOLS TO ENHANCE DESIGN:**
-
-#### **1. Animation Libraries:**
-```html
-<!-- AOS (Animate On Scroll) - FREE -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<!-- Usage: Add stunning scroll animations -->
-<div data-aos="fade-up" data-aos-duration="800">Content</div>
-<div data-aos="zoom-in" data-aos-delay="200">Cards</div>
+# Start development
+pnpm run dev
 ```
 
-#### **2. Icon Enhancement:**
-```html
-<!-- Lucide Icons - FREE (Better than Font Awesome) -->
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+### **Netlify Deployment:**
+1. Connect GitHub repository to Netlify
+2. Build command: `pnpm run build`
+3. Publish directory: `dist`
+4. Node version: 18.x or higher
+5. Environment variables: Add in Netlify dashboard
 
-<!-- Usage: Crisp, modern icons -->
-<i data-lucide="zap"></i>
-<i data-lucide="trending-up"></i>
-<i data-lucide="shield-check"></i>
-```
+## 📊 **Available Scripts:**
 
-#### **3. Advanced Animations:**
-```html
-<!-- Lottie Animations - FREE -->
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-<!-- Usage: Professional animated icons -->
-<lottie-player src="https://assets5.lottiefiles.com/packages/lf20_energy.json" 
-               background="transparent" speed="1" loop autoplay></lottie-player>
-```
-
-#### **4. Particle Effects:**
-```html
-<!-- Particles.js - FREE -->
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-<!-- Usage: Subtle background particles for hero section -->
-<div id="particles-js"></div>
-```
-
-#### **5. Advanced Typography:**
-```css
-/* Google Fonts - Premium combinations */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-
-/* Usage: Modern font pairing */
-.heading { font-family: 'Space Grotesk', sans-serif; }
-.body { font-family: 'Inter', sans-serif; }
-```
-
-### **🎯 SPECIFIC DESIGN IMPROVEMENTS:**
-
-#### **Hero Section Enhancements:**
-```html
-<!-- Add animated background gradient -->
-<div class="hero-section">
-  <div class="animated-gradient"></div>
-  <div class="floating-elements">
-    <!-- Subtle floating icons -->
-  </div>
-</div>
-
-<style>
-.animated-gradient {
-  background: linear-gradient(-45deg, #0f172a, #1e293b, #334155, #475569);
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-</style>
-```
-
-#### **Interactive Elements:**
-```css
-/* Hover effects for cards */
-.service-card {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-origin: center;
-}
-
-.service-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
-
-/* Magnetic button effect */
-.cta-button {
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.cta-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-  transform: translateX(-100%);
-  transition: transform 0.6s;
-}
-
-.cta-button:hover::before {
-  transform: translateX(100%);
-}
-```
-
-#### **Advanced Component Styling:**
-```css
-/* Glass morphism effect */
-.glass-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-}
-
-/* Neumorphism buttons */
-.neu-button {
-  background: #e0e5ec;
-  box-shadow: 
-    20px 20px 60px #bebebe,
-    -20px -20px 60px #ffffff;
-  border-radius: 50px;
-  transition: all 0.3s ease;
-}
-
-.neu-button:hover {
-  box-shadow: 
-    inset 20px 20px 60px #bebebe,
-    inset -20px -20px 60px #ffffff;
-}
-```
-
-### **📱 MOBILE-FIRST ENHANCEMENTS:**
-
-#### **Touch-Friendly Interactions:**
-```css
-/* Better mobile touch targets */
-@media (max-width: 768px) {
-  .mobile-cta {
-    min-height: 48px;
-    min-width: 48px;
-    padding: 16px 24px;
-  }
-  
-  /* Sticky floating action button */
-  .fab {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #16a34a, #22c55e);
-    box-shadow: 0 8px 32px rgba(34, 197, 94, 0.3);
-    z-index: 1000;
+```json
+{
+  "scripts": {
+    "dev": "vite --port 7763 --host",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   }
 }
 ```
 
-#### **Progressive Enhancement:**
-```html
-<!-- Intersection Observer for performance -->
-<script>
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
+## 🎆 **Key Features:**
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate-in');
-    }
-  });
-}, observerOptions);
+### **Homepage:**
+- Hero section with animated gradients and floating orbs
+- Real-time statistics counters
+- Service cards with hover effects
+- Process steps visualization
+- Supplier carousel
+- Trustpilot integration
+- Call-to-action sections
 
-document.querySelectorAll('.animate-on-scroll').forEach(el => {
-  observer.observe(el);
-});
-</script>
+### **LOA Page:**
+- Comprehensive Letter of Authority form
+- Company details section
+- Contact information fields
+- Energy supply details
+- Terms acceptance
+- Submit to Google Sheets integration
+
+### **Components:**
+- **Navigation**: Glass effect with mobile responsive menu
+- **Quote Form**: Multi-field form with Google Sheets integration
+- **Footer**: Contact info, social links, company information
+- **Supplier Carousel**: Auto-scrolling logos of 30+ suppliers
+- **Trustpilot Widget**: Real-time review integration
+
+## 🔧 **API Integrations:**
+
+- **Google Sheets API**: Form submissions and lead capture
+- **Trustpilot API**: Review widget and ratings
+- **External Quote App**: https://app.watt.co.uk
+- **Google Analytics**: Tracking and conversion metrics
+
+## 📞 **Contact Information:**
+
+- **Phone**: 0161 833 8661
+- **Email**: info@wattdeals.co.uk
+- **Website**: https://wattdeals.co.uk
+- **GitHub**: https://github.com/sheep1986/wattdeals
+
+## 📝 **Browser Support:**
+
+- Chrome 91+
+- Safari 14+
+- Firefox 88+
+- Edge 91+
+- Mobile Safari (iOS)
+- Chrome Mobile (Android)
+
+## 🎆 **Performance Optimization:**
+
+- Vite build optimization
+- Code splitting and lazy loading
+- Image optimization (WebP format)
+- Minified CSS/JS bundles
+- Tree shaking for unused code
+- Compression enabled
+- CDN-ready static assets
+
+## 🔒 **Security Considerations:**
+
+- HTTPS enforcement for all external resources
+- Content Security Policy headers
+- Form validation and sanitization
+- GDPR compliant data handling
+- Secure Google Sheets integration
+- No exposed API keys or secrets
+
+## 🤝 **Contributing:**
+
+### **Development Workflow:**
+```bash
+# Create feature branch
+git checkout -b feature/your-feature
+
+# Make changes and commit
+git add .
+git commit -m "feat: your feature description"
+
+# Push to GitHub
+git push origin feature/your-feature
+
+# Create pull request on GitHub
 ```
+
+### **Commit Convention:**
+- `feat:` New feature
+- `fix:` Bug fix
+- `docs:` Documentation
+- `style:` Formatting
+- `refactor:` Code restructuring
+- `test:` Testing
+- `chore:` Maintenance
+
+## 📄 **License:**
+
+This project is proprietary software. All rights reserved.
+
+## 👥 **Team:**
+
+- **Development**: Claude Code AI Assistant
+- **Design**: Modern glassmorphism with dark theme
+- **Deployment**: Netlify CI/CD
+- **Repository**: GitHub (sheep1986/wattdeals)
+
+## 🚀 **Project Status:**
+
+- **Version**: 1.0.0
+- **Status**: Production Ready
+- **Last Updated**: October 2025
+- **Deployment**: GitHub + Netlify
+
+
+
+
+
+
 
 ### **🎨 FREE DESIGN RESOURCES:**
 
@@ -790,69 +460,35 @@ gtag('event', 'form_submit', {
 - Complete content pages
 - Performance optimized
 
-## 🤝 **Contributing Guidelines**
 
-### **Code Standards:**
-- Use semantic HTML5 elements
-- Follow Tailwind CSS conventions
-- Maintain consistent indentation (2 spaces)
-- Comment complex JavaScript functions
-- Optimize images before adding
+## 🔍 **SEO Optimization:**
 
-### **Git Workflow:**
-```bash
-# Create feature branch
-git checkout -b feature/navigation-fixes
+- React Helmet for meta tags
+- Structured data markup
+- Sitemap generation
+- Open Graph tags
+- Twitter Card meta tags
+- Canonical URLs
+- Mobile-first indexing ready
 
-# Make changes and commit
-git add .
-git commit -m "Fix navigation links and add service pages"
+## 📦 **Dependencies:**
 
-# Push and create PR
-git push origin feature/navigation-fixes
+```json
+"dependencies": {
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "react-router-dom": "^6.14.2",
+  "framer-motion": "^10.15.0",
+  "lucide-react": "^0.263.1",
+  "react-helmet-async": "^1.3.0",
+  "react-intersection-observer": "^9.5.2"
+},
+"devDependencies": {
+  "@vitejs/plugin-react": "^4.0.3",
+  "tailwindcss": "^3.3.3",
+  "vite": "^4.4.5"
+}
 ```
-
-## 🚨 **Known Bugs & Issues**
-
-### **High Priority:**
-1. **Navigation Links**: 95% of links are broken (`href="#"`)
-2. **CTA Redirect Issue**: Quote buttons show popups instead of redirecting to `https://app.watt.co.uk`
-3. **Missing Pages**: No service pages, about, case studies
-4. **Design Inconsistency**: Wrong color scheme vs brand standards
-
-### **Medium Priority:**
-5. **Performance**: Large image files need optimization
-6. **Mobile UX**: Missing sticky CTAs
-7. **SEO**: Missing meta tags on many elements
-8. **Accessibility**: Some color contrast issues
-
-### **Low Priority:**
-9. **Code Organization**: Inline styles should be externalized
-10. **Documentation**: Need inline code comments
-
-## 📞 **Support & Contact**
-
-### **Project Contact:**
-- **Primary Developer**: Claude Code AI Assistant
-- **Project Manager**: User Review Required
-- **Technical Issues**: See troubleshooting section below
-
-### **Troubleshooting:**
-
-#### **Forms Not Submitting:**
-1. Check Google Apps Script URL is correct
-2. Verify Google Sheets permissions
-3. Check browser console for errors
-
-#### **Images Not Loading:**
-1. Verify files exist in `/public/images/` directory
-2. Check file paths are correct (case-sensitive)
-3. Ensure local server is running
-
-#### **Navigation Not Working:**
-1. Current issue: Most links go to `href="#"`
-2. Solution: Create missing pages and update links
-3. Priority: See todo list items #42-51
 
 ## 🗺️ **Roadmap & Future Plans**
 
