@@ -419,7 +419,7 @@ const HomePage = () => {
       </section>
 
       {/* Trustpilot Section */}
-      <section className="py-20 bg-slate-950">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <TrustpilotWidget />
         </div>

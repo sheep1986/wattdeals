@@ -49,11 +49,15 @@ const TrustpilotWidget = () => {
         >
           {/* Large Trustpilot Logo */}
           <div className="flex justify-center mb-6">
-            <img 
-              src="https://cdn.trustpilot.net/brand-assets/4.1.0/logo-black.svg" 
-              alt="Trustpilot" 
-              className="h-12 md:h-16"
-            />
+            <svg className="h-12 md:h-16" viewBox="0 0 126 31" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h29.8v30.7H0z" fill="#00b67a"/>
+              <path d="M14.9 11.8L21.1 11.7L14.9 2.9L8.7 11.7L14.9 11.8Z" fill="#fff"/>
+              <path d="M23.1 11.7H14.9V20.4L23.1 11.7Z" fill="#fff"/>
+              <path d="M14.9 20.4L11.1 18.5L6.7 27.7L14.9 20.4Z" fill="#fff"/>
+              <path d="M11.1 18.5L14.9 20.4V11.8L6.7 11.7L11.1 18.5Z" fill="#005128"/>
+              <path d="M18.7 18.5L14.9 20.4L23.1 27.7L18.7 18.5Z" fill="#fff"/>
+              <text x="35" y="22" fontFamily="Arial, sans-serif" fontSize="20" fontWeight="600" fill="#191919">Trustpilot</text>
+            </svg>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -70,14 +74,18 @@ const TrustpilotWidget = () => {
               <p className="text-gray-600">Based on 2,847 reviews</p>
             </div>
           </div>
-          <div className="inline-flex items-center gap-3 bg-blue-50 px-6 py-3 rounded-full border border-blue-100">
+          <div className="inline-flex items-center gap-3 bg-green-50 px-6 py-3 rounded-full border border-green-100">
             <Star className="w-5 h-5 text-[#00b67a] fill-[#00b67a]" />
             <span className="font-semibold text-gray-800">Excellent Rating on</span>
-            <img 
-              src="https://cdn.trustpilot.net/brand-assets/4.1.0/logo-black.svg" 
-              alt="Trustpilot" 
-              className="h-5"
-            />
+            <svg className="h-5" viewBox="0 0 126 31" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h29.8v30.7H0z" fill="#00b67a"/>
+              <path d="M14.9 11.8L21.1 11.7L14.9 2.9L8.7 11.7L14.9 11.8Z" fill="#fff"/>
+              <path d="M23.1 11.7H14.9V20.4L23.1 11.7Z" fill="#fff"/>
+              <path d="M14.9 20.4L11.1 18.5L6.7 27.7L14.9 20.4Z" fill="#fff"/>
+              <path d="M11.1 18.5L14.9 20.4V11.8L6.7 11.7L11.1 18.5Z" fill="#005128"/>
+              <path d="M18.7 18.5L14.9 20.4L23.1 27.7L18.7 18.5Z" fill="#fff"/>
+              <text x="35" y="22" fontFamily="Arial, sans-serif" fontSize="20" fontWeight="600" fill="#191919">Trustpilot</text>
+            </svg>
           </div>
         </motion.div>
       </div>
