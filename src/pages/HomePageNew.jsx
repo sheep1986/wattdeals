@@ -232,13 +232,8 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              {/* Glassmorphism Quote Form */}
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 blur-3xl"></div>
-                <div className="relative bg-white/5 backdrop-blur-2xl rounded-3xl border border-white/10 p-1">
-                  <QuoteForm variant="dark" />
-                </div>
-              </div>
+              {/* Quote Form */}
+              <QuoteForm />
             </motion.div>
           </div>
         </div>
