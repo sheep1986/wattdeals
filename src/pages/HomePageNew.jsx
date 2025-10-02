@@ -118,12 +118,31 @@ const HomePage = () => {
       </Helmet>
 
       {/* Modern Hero Section with Parallax */}
-      <section className="relative min-h-screen flex items-center overflow-hidden" style={{
-        backgroundImage: 'url(https://i.ibb.co/g2JQKRb/Heading-2.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}>
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-white via-green-50 to-emerald-50">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Gradient Circles */}
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-green-300/30 to-emerald-400/30 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-emerald-300/30 to-green-400/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-green-200/20 to-emerald-300/20 rounded-full blur-3xl"></div>
+          
+          {/* Geometric Pattern */}
+          <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+                <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgb(34 197 94 / 0.05)" strokeWidth="1"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+          </svg>
+          
+          {/* Wave Shape */}
+          <div className="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 320" className="w-full">
+              <path fill="rgb(34 197 94 / 0.05)" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,133.3C960,128,1056,96,1152,96C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+          </div>
+        </div>
 
         <div className="container relative z-10 mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -134,42 +153,42 @@ const HomePage = () => {
             >
               {/* Premium Badge */}
               <motion.div 
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-xl border border-green-500/30 rounded-full px-4 py-2 mb-6"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full px-4 py-2 mb-6 shadow-lg"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.3, type: "spring" }}
               >
-                <Sparkles className="w-5 h-5 text-green-400" />
-                <span className="text-sm font-semibold text-green-300">Trusted by 10,000+ UK Businesses</span>
+                <Sparkles className="w-5 h-5" />
+                <span className="text-sm font-semibold">Trusted by 10,000+ UK Businesses</span>
               </motion.div>
               
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                <span className="text-white">Power Your</span>
+                <span className="text-gray-900">Power Your</span>
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600">
                   Business Growth
                 </span>
               </h1>
               
-              <p className="text-xl mb-8 text-gray-300 leading-relaxed">
+              <p className="text-xl mb-8 text-gray-700 leading-relaxed">
                 Revolutionary energy procurement platform delivering 
-                <span className="text-green-400 font-semibold"> 45% average savings</span> through 
+                <span className="text-green-600 font-semibold"> 45% average savings</span> through 
                 AI-powered supplier matching and real-time market analysis.
               </p>
 
               {/* Stats Row */}
               <div className="grid grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400">45%</div>
-                  <div className="text-sm text-gray-400">Avg Savings</div>
+                <div className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-md">
+                  <div className="text-3xl font-bold text-green-600">45%</div>
+                  <div className="text-sm text-gray-600">Avg Savings</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400">30+</div>
-                  <div className="text-sm text-gray-400">Suppliers</div>
+                <div className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-md">
+                  <div className="text-3xl font-bold text-green-600">30+</div>
+                  <div className="text-sm text-gray-600">Suppliers</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400">24/7</div>
-                  <div className="text-sm text-gray-400">Support</div>
+                <div className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-md">
+                  <div className="text-3xl font-bold text-green-600">24/7</div>
+                  <div className="text-sm text-gray-600">Support</div>
                 </div>
               </div>
               
@@ -178,7 +197,7 @@ const HomePage = () => {
                   href="https://app.watt.co.uk"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-xl font-bold overflow-hidden transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-green-500/25"
+                  className="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-xl font-bold overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-green-500/30"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -189,11 +208,11 @@ const HomePage = () => {
                 
                 <motion.a
                   href="tel:01618338661"
-                  className="group inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-xl text-white px-8 py-4 rounded-xl font-bold border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  className="group inline-flex items-center justify-center gap-2 bg-white text-gray-900 px-8 py-4 rounded-xl font-bold border-2 border-gray-200 hover:border-green-500 hover:bg-green-50 transition-all duration-300 shadow-md"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-5 h-5 text-green-600" />
                   <span>0161 833 8661</span>
                 </motion.a>
               </div>
@@ -217,7 +236,7 @@ const HomePage = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
         >
-          <ChevronRight className="w-6 h-6 text-white/50 rotate-90" />
+          <ChevronRight className="w-6 h-6 text-gray-600/50 rotate-90" />
         </motion.div>
       </section>
 
