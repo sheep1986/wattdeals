@@ -246,10 +246,10 @@ const HomePage = () => {
         <div className="absolute inset-0 overflow-hidden opacity-10">
           <div className="grid grid-cols-2 h-full">
             <div className="relative">
-              <img src="https://i.ibb.co/sPcLPsG/manchester.jpg" alt="Manchester" className="w-full h-full object-cover" />
+              <img src="/images/london.jpg" alt="Manchester" className="w-full h-full object-cover" />
             </div>
             <div className="relative">
-              <img src="https://i.ibb.co/W56v4Hx/london.jpg" alt="London" className="w-full h-full object-cover" />
+              <img src="/images/modern-office.jpg" alt="London" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -314,22 +314,22 @@ const HomePage = () => {
                     {/* Add images for each service */}
                     {service.title === 'Green Energy' && (
                       <div className="h-40 overflow-hidden">
-                        <img src="https://i.ibb.co/4fCfzyV/wind-power-plant-at-sunset-5639456.jpg" alt="Wind Power" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <img src="/images/solar.jpg" alt="Green Energy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                       </div>
                     )}
                     {service.title === 'Business Electricity' && (
                       <div className="h-40 overflow-hidden">
-                        <img src="https://i.ibb.co/mRJQxkr/solar-panels.jpg" alt="Solar Panels" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <img src="/images/lightbulb.jpg" alt="Business Electricity" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                       </div>
                     )}
                     {service.title === 'Business Gas' && (
                       <div className="h-40 overflow-hidden">
-                        <img src="https://i.ibb.co/q1Rq7hB/lightbulb.jpg" alt="Energy Innovation" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <img src="/images/modern-office.jpg" alt="Business Gas" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                       </div>
                     )}
                     {service.title === 'Multi-Site Energy' && (
                       <div className="h-40 overflow-hidden">
-                        <img src="https://i.ibb.co/KVBCc1y/laptop.jpg" alt="Business Technology" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <img src="/images/job.jpg" alt="Multi-Site Energy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                       </div>
                     )}
                     <div className="p-6 flex-grow flex flex-col">
@@ -355,10 +355,10 @@ const HomePage = () => {
       <section className="py-20 bg-gradient-to-b from-green-50 to-white relative overflow-hidden">
         {/* Decorative Images */}
         <div className="absolute right-0 top-20 w-64 h-64 opacity-10">
-          <img src="https://i.ibb.co/GJ8vPYM/man.jpg" alt="Professional" className="w-full h-full object-cover rounded-full" />
+          <img src="/images/job.jpg" alt="Professional" className="w-full h-full object-cover rounded-full" />
         </div>
         <div className="absolute left-0 bottom-20 w-64 h-64 opacity-10">
-          <img src="https://i.ibb.co/dkLxCzQ/student.jpg" alt="Student" className="w-full h-full object-cover rounded-full" />
+          <img src="/images/cheese.jpg" alt="Student" className="w-full h-full object-cover rounded-full" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -411,27 +411,23 @@ const HomePage = () => {
           {/* Partnership Logos */}
           <div className="mt-12 pt-8 border-t border-gray-200">
             <h4 className="text-center text-lg font-semibold text-gray-700 mb-6">Our Partnerships & Accreditations</h4>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-              <img 
-                src="https://i.ibb.co/S7PKPmt/1.png" 
-                alt="Partnership 1" 
-                className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
-              />
-              <img 
-                src="https://i.ibb.co/LDws4MW/2.png" 
-                alt="Partnership 2" 
-                className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
-              />
-              <img 
-                src="https://i.ibb.co/6cbMz0J/3.png" 
-                alt="Partnership 3" 
-                className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
-              />
-              <img 
-                src="https://i.ibb.co/m5QSF5y/4.png" 
-                alt="Partnership 4" 
-                className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
-              />
+            <div className="flex flex-wrap justify-center gap-8 items-center">
+              <div className="bg-gray-100 rounded-lg p-4">
+                <Shield className="w-12 h-12 text-green-600" />
+                <p className="text-xs mt-2 text-gray-600">GDPR Compliant</p>
+              </div>
+              <div className="bg-gray-100 rounded-lg p-4">
+                <Award className="w-12 h-12 text-green-600" />
+                <p className="text-xs mt-2 text-gray-600">Ofgem Registered</p>
+              </div>
+              <div className="bg-gray-100 rounded-lg p-4">
+                <FileCheck className="w-12 h-12 text-green-600" />
+                <p className="text-xs mt-2 text-gray-600">TPI Certified</p>
+              </div>
+              <div className="bg-gray-100 rounded-lg p-4">
+                <Users className="w-12 h-12 text-green-600" />
+                <p className="text-xs mt-2 text-gray-600">10,000+ Clients</p>
+              </div>
             </div>
           </div>
         </div>
@@ -448,7 +444,7 @@ const HomePage = () => {
               className="order-2 lg:order-1"
             >
               <img 
-                src="https://i.ibb.co/VYkBwrk/calculator-1156121-1280.jpg" 
+                src="/images/lightbulb.jpg" 
                 alt="Energy Savings Calculator" 
                 className="rounded-2xl shadow-2xl w-full"
               />
@@ -555,7 +551,7 @@ const HomePage = () => {
               transition={{ duration: 0.8 }}
             >
               <img 
-                src="https://i.ibb.co/gLhrYdg/meeting-2284501-1280.jpg" 
+                src="/images/modern-office.jpg" 
                 alt="Business Meeting" 
                 className="rounded-2xl shadow-2xl w-full"
               />
@@ -651,7 +647,7 @@ const HomePage = () => {
               className="relative"
             >
               <img 
-                src="https://i.ibb.co/LdcGGQH/business-man.jpg" 
+                src="/images/job.jpg" 
                 alt="Business Success" 
                 className="rounded-2xl shadow-2xl w-full"
               />

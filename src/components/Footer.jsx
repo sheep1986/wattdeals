@@ -235,14 +235,16 @@ const Footer = () => {
                 Registered Office: St Ann's House, Manchester, M2 7LP
               </p>
             </div>
-            {/* ICO Registration Logo */}
-            <div className="flex items-center gap-2">
-              <img 
-                src="https://i.ibb.co/xSCWDtYf/5.png" 
-                alt="ICO Registration" 
-                className="h-16 w-auto"
-              />
-              <span className="text-xs text-gray-500">Data Protection<br />Registration</span>
+            {/* ICO Registration Badge */}
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-lg">
+                <Shield className="w-8 h-8 text-primary-600" />
+                <div>
+                  <span className="text-xs font-semibold text-gray-700">ICO Registered</span>
+                  <br />
+                  <span className="text-xs text-gray-500">Data Protection</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
