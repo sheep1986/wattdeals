@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
@@ -7,7 +6,7 @@ import {
   Users, Heart, Award, Target, TrendingUp, Shield, 
   Clock, CheckCircle, Star, Building2, 
   ArrowRight, Phone, Mail, MapPin, Calendar,
-  Lightbulb, Zap, Globe, BookOpen, Handshake
+  Lightbulb, Zap, Globe, BookOpen
 } from 'lucide-react'
 
 const AboutPage = () => {
@@ -39,7 +38,7 @@ const AboutPage = () => {
       desc: 'We strive for perfection in every aspect of our service delivery.'
     },
     {
-      icon: <Handshake className="w-8 h-8" />,
+      icon: <Users className="w-8 h-8" />,
       title: 'Integrity',
       desc: 'Building lasting relationships through trust, honesty, and reliability.'
     },
